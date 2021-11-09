@@ -9,7 +9,7 @@ void number_of_products_div()
      +1. считать и запомнить числа
      +2. вывести все пары чисел
      +3. вместо пар вывести произведения
-     4. проверить делимость произведений
+     +4. проверить делимость произведений
      5. просчитать и вывести количество подходящих произведений
      */
      int n(0);
@@ -20,7 +20,10 @@ void number_of_products_div()
 
      for (int j(0); j < n-1; j++)
         for (int i(j+1); i < n; i++)
-            cout << numbers[j] * numbers[i] << endl;
+        {
+            if (numbers[j] * numbers[i] % 33 == 0)
+              cout << numbers[j] * numbers[i] << endl;
+        }
 
 
 
