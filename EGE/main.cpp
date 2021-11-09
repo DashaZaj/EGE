@@ -7,7 +7,7 @@ void number_of_products_div()
 /**
 +1. считать число.
 +2. добавить 1 в один из счётчиков
-3. вычислить и вывести ответ n33*n11 + n33*n3 + n33*no + n33*(n33-1)/2 + n11*n3
++3. вычислить и вывести ответ n33*n11 + n33*n3 + n33*no + n33*(n33-1)/2 + n11*n3
 */
   int n(0), cur(0);
   int n33(0), n11(0), n3(0), no(0);
@@ -21,7 +21,7 @@ void number_of_products_div()
       else if (cur%3 == 0) n3++;
   }
   no = n - n33 - n11 - n3;
-  cout << n33 << " " << n11 << " " << n3 << " " << no << endl;
+  cout << n33*n11 + n33*n3 + n33*no + n33*(n33-1)/2 + n11*n3<< endl;
 }
 
 int main()
