@@ -7,21 +7,25 @@ void number_of_products_div()
 /**
 +1. считать число.
 +2. добавить 1 в один из счётчиков
-+3. вычислить и вывести ответ n33*n11 + n33*n3 + n33*no + n33*(n33-1)/2 + n11*n3
++3. вычислить и вывести ответ n70*n14 + n70*n35 + n70*n10 + n70*n7 + n70*n5 + n70*n2 + n70*no+ n70*(n70-1)/2 + n10*n7 + n35*n2 + n14*n5 + n10*n35 + n10*n14 + n35*n14
 */
   int n(0), cur(0);
-  int n33(0), n11(0), n3(0), no(0);
+  int n70(0), n35(0), n10(0), n14(0), n7(0), n5(0), n2(0), no(0);
 
   cin >> n;
   for (int i(0); i < n; i++)
   {
       cin >> cur;
-      if (cur%33 == 0) n33++;
-      else if (cur%11 == 0) n11++;
-      else if (cur%3 == 0) n3++;
+      if (cur%70 == 0) n70++;
+      else if (cur%35 == 0) n35++;
+      else if (cur%14 == 0) n14++;
+      else if (cur%10 == 0) n10++;
+      else if (cur%7 == 0) n7++;
+      else if (cur%5 == 0) n5++;
+      else if (cur%2 == 0) n2++;
   }
-  no = n - n33 - n11 - n3;
-  cout << n33*n11 + n33*n3 + n33*no + n33*(n33-1)/2 + n11*n3<< endl;
+  no = n - n70 - n35 - n14 - n10 - n7 - n5 - n2;
+  cout << n70*n14 + n70*n35 + n70*n10 + n70*n7 + n70*n5 + n70*n2 + n70*no+ n70*(n70-1)/2 + n10*n7 + n35*n2 + n14*n5 + n10*n35 + n10*n14 + n35*n14 << endl;
 }
 
 int main()
