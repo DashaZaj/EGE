@@ -16,7 +16,7 @@ void max_sum_div()
     for (int i(0); i < n; i++){
         ifs >> cur;
         if (cur % 2 == 0 and cur > max_even) max_even = cur;
-        else if (cur > max_odd) max_odd = cur;
+        else if (cur%2 == 1 and cur > max_odd) max_odd = cur;
     }
     if (max_even != -1001 and max_odd != -1001) cout << max_even + max_odd << endl;
     else cout << -1 << endl;
