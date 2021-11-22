@@ -27,7 +27,8 @@ void max_sum_div()
                 max_sum = sum;
         }
     }
-    cout << max_sum << endl;
+    if (max_sum != 0) cout << max_sum << endl;
+    else cout << -1 << endl;
 }
 
 int main()
