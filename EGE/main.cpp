@@ -16,7 +16,7 @@ void max_sum_div(){
     for (int i(0); i < n; i++){
         ifs >> cur;
         if (cur%7 == 0 and cur > m01) m01 = cur;
-        else if (cur&7 == 0 and cur > m02) m02 = cur;
+        else if (cur%7 == 0 and cur > m02) m02 = cur;
         else if (cur%7 == 1 and cur > m1) m1 = cur;
         else if (cur%7 == 2 and cur > m2) m2 = cur;
         else if (cur%7 == 3 and cur > m3) m3 = cur;
