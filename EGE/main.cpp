@@ -10,7 +10,7 @@ void min_sum_not_farther_than_4()
     /**
     +1. ввести и сохранить чила
     +2. составить и вывести пары, подходящие под условие
-    3. нийти и вывести минимум
+    +3. найти и вывести минимум
     */
     int n(0);
     ifs >> n;
@@ -18,12 +18,15 @@ void min_sum_not_farther_than_4()
     for (int i(0); i < n; i++)
         ifs >> numbers[i];
 
+    int mini(1001), sum(0);
     for (int i(0); i < n-1; i++){
         for (int j(i+1); j < n; j++){
-            if ( abs(j - i) >= 4)
-                cout << numbers[i] << " " << numbers[j] << endl;
+            sum = numbers[i]+numbers[j];
+            if ( (abs(j - i) >= 4) and (mini > sum))
+                mini = sum;
         }
     }
+    cout << mini << endl;
 }
 
 int main()
