@@ -19,7 +19,7 @@ void sum_div_30_not_farther_then_7(){
         ifs >> numbers[i];
     int counter(0);
     for (int i(0); i < n; i++){
-        for (int j(i+1); j< i+8 and j<n; j++){
+        for (int j(i+1); j< i+7 and j<n; j++){
             int par = numbers[i] + numbers[j];
             if (par % 30 == 0) counter ++;
         }
