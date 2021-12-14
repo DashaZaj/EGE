@@ -8,7 +8,7 @@ void number_of_sums_div_30_not_farther_then_7(){
     ifstream ifs("data.txt");
     /*
     +1. считать 6 чисел в цикличный буфер
-    2. проверить все пары на кратность 30
+    +2. проверить все пары на кратность 30
     3. считать ещё одно число
     4. проверит 5 новых пар
     5. повторять 3 и 4 пункты
@@ -17,11 +17,13 @@ void number_of_sums_div_30_not_farther_then_7(){
     int N(0);
     ifs >> N;
     vector <int> snake(6);
-    int head(snake[0]), tail(snake[1]);
+    int head(snake[0]), tail(snake[1]), counter(0);
     for (int i(0); i < 6; i++)
         ifs >> snake[i];
-    for (int i(0); i < 6; i++)
-        cout << snake[i] << " ";
+    for (int j(0); j<5; j++)
+        for (int l(j); l < 6; l++)
+            if ((snake[j] + snake[l]) % 30 == 0) counter++;
+    cout << counter << endl;
 }
 
 int main()
