@@ -18,12 +18,17 @@ void max_sum_multiple_distance(){
     ifs >> N;
     for (int i(0); i < N; i++){
         ifs >> a;
-        if (a > maxs[i%6][0]) maxs[i%6][0] = a;
-        else if (a > maxs[i%6][1]) maxs[i%6][1] = a;
+        if (a > maxs[i%6][0]){
+                maxs[i%6][1] = maxs[i%6][0];
+                maxs[i%6][0] = a;
+        }
+        else if ( a > maxs[i%6][1]) maxs[i%6][1] = a;
     }
+    int maxi(0);
     for (int i(0); i < 6; i++){
-        cout << maxs[i][0] << " " << maxs[i][1] << endl;
+        if (maxs[i][0] + maxs[i][1] > maxi) maxi = maxs[i][0] + maxs[i][1];
     }
+    cout << maxi << endl;
 }
 
 int main()
