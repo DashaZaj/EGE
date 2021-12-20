@@ -22,11 +22,20 @@ void num_div_sum_multiple_distance(){
         cin >> num;
         slice[i%3][num%36]++;
     }
-    for (int j(0); j<3; j++){
-        for (int i(0); i < 36; i++)
-            cout << slice[j][i] << " ";
-        cout << endl;
+    int answer(0);
+    for (int i(1); i<18; i++){
+        int j(36-i);
+        answer += slice[0][i]*slice[0][j];
+        answer += slice[1][i]*slice[1][j];
+        answer += slice[2][i]*slice[2][j];
     }
+    answer += slice[0][0]*(slice[0][0]-1)/2;
+    answer += slice[1][0]*(slice[1][0]-1)/2;
+    answer += slice[2][0]*(slice[2][0]-1)/2;
+    answer += slice[0][18]*(slice[0][18]-1)/2;
+    answer += slice[1][18]*(slice[1][18]-1)/2;
+    answer += slice[2][18]*(slice[2][18]-1)/2;
+    cout << answer << endl;
 }
 
 int main()
