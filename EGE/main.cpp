@@ -25,16 +25,13 @@ void num_div_sum_multiple_distance(){
     int answer(0);
     for (int i(1); i<18; i++){
         int j(36-i);
-        answer += slice[0][i]*slice[0][j];
-        answer += slice[1][i]*slice[1][j];
-        answer += slice[2][i]*slice[2][j];
+        for (int u(0); u<3; u++)
+            answer += slice[u][i]*slice[u][j];
     }
-    answer += slice[0][0]*(slice[0][0]-1)/2;
-    answer += slice[1][0]*(slice[1][0]-1)/2;
-    answer += slice[2][0]*(slice[2][0]-1)/2;
-    answer += slice[0][18]*(slice[0][18]-1)/2;
-    answer += slice[1][18]*(slice[1][18]-1)/2;
-    answer += slice[2][18]*(slice[2][18]-1)/2;
+    for (int u(0); u<3; u++){
+    answer += slice[u][0]*(slice[u][0]-1)/2;
+    answer += slice[u][18]*(slice[u][18]-1)/2;
+    }
     cout << answer << endl;
 }
 
