@@ -12,9 +12,9 @@ void num_three_prod_div_4(){
     +2. вывести все возможные пары чисел без учёта порядка
     +3. вывести все тройки чисел без учёта порядка
     +4. вывести только тройки, произведение членов которой кратно 4
-    5. подсчитать в вывести их количество
+    +5. подсчитать в вывести их количество
     **/
-    int N(0);
+    int N(0), counter(0);
     cin >> N;
     vector <int> numbers(N, 0);
     for (int i(0); i < N; i++)
@@ -22,11 +22,11 @@ void num_three_prod_div_4(){
     for (int i(0); i < N-2; i++){
         for (int j(i+1); j< N-1; j++){
             for(int l(j+1); l<N; l++){
-                if ((numbers[i] * numbers[j] * numbers[l])%4 == 0)
-                    cout << numbers[i] << " " << numbers[j] << " " << numbers[l] << endl;
+                if ((numbers[i] * numbers[j] * numbers[l])%4 == 0) counter++;
             }
         }
     }
+    cout << counter << endl;
 }
 
 int main()
