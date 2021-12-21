@@ -9,7 +9,7 @@ void num_three_prod_div_4(){
     /*
     +1. ввести данные
     +2. в процессе считывания данных считать количество чисел, кратных 4(div)
-    3. вывести ответ(div*(n-1)*(n-2))
+    +3. вывести ответ(div*(n-1)*(n-2))
     **/
     int n(0), div(0);
     cin >> n;
@@ -18,7 +18,7 @@ void num_three_prod_div_4(){
         cin >> cur;
         if (cur % 4== 0) div++;
     }
-    cout << div << endl;
+    cout << div*(n-1)*(n-2) << endl;
 }
 
 int main()
