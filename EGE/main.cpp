@@ -21,7 +21,7 @@ void num_three_prod_div_4(){
         else no++;
     }
     int n2 = no + div2;
-    cout << div4*(n2*(n2-1)/2) + (div4*(div4-1)/2)*n2 + div4*(div4-1)*(div4-2)/6 + (div2*(div2-1)/2)*no << endl;
+    cout << div4*(n2*(n2-1)/2) + (div4*(div4-1)/2)*n2 + div4*(div4-1)*(div4-2)/6 + (div2*(div2-1)/2)*no + div2*(div2-1)*(div2-2)/6 << endl;
 }
 
 int main()
